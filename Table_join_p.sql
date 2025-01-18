@@ -1,3 +1,9 @@
+CREATE TABLE "Customers" (
+	"CustomerID"	INTEGER,
+	"Name"	TEXT,
+	"Remaining"	INTEGER,
+	PRIMARY KEY("CustomerID")
+);
 CREATE TABLE "installments" (
 	"TransactionID"	INTEGER,
 	"Amount"	INTEGER,
@@ -5,12 +11,6 @@ CREATE TABLE "installments" (
 	"Date"	TEXT,
 	PRIMARY KEY("TransactionID"),
 	FOREIGN KEY("CustomerID") REFERENCES "Customers"("CustomerID")
-);
-CREATE TABLE "Customers" (
-	"CustomerID"	INTEGER,
-	"Name"	TEXT,
-	"Remaining"	INTEGER,
-	PRIMARY KEY("CustomerID")
 );
 INSERT INTO "Customers" ("CustomerID", "Name", "Remaining")
 VALUES 
