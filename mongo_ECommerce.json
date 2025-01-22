@@ -1,0 +1,4 @@
+//1
+mongoimport --db ECommerce --collection market --type json --file ECommerce.json --jsonArray
+//2
+db.market.find({"Price" : {$gt : 90}},{"Name" : 1, "Color" : 1})
